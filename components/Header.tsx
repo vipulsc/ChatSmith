@@ -10,9 +10,7 @@ function Header() {
 
         <div className="space-y-1">
           <h1>CodeSmith</h1>
-          <h2 className="text-sm">
-            Empower Your Conversations with a Customizable AI Assistant
-          </h2>
+          <h2 className="text-sm">Your Personalized AI Chat</h2>
         </div>
       </Link>
 
