@@ -27,14 +27,14 @@ function CreateChatbot() {
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
     try {
-      console.log("123");
+
 
       const data = await createChatbot();
       setName("");
 
       router.push(`/edit-chatbot/${data.data.insertChatbots.id}`);
     } catch (error) {
-      console.log(error);
+
     }
   };
   return (

@@ -11,8 +11,6 @@ const corsHeaders = {
 
 export async function POST(request: NextRequest) {
   const { query, variables } = await request.json();
-  console.log("Received query:", query);
-  console.log("Received variables:", variables);
 
   // Static argument for `created_at`
   const staticCreatedAt = new Date().toISOString(); // You can set this to a specific date-time if needed
@@ -38,8 +36,6 @@ export async function POST(request: NextRequest) {
         variables,
       });
     }
-
-    console.log("GraphQL result:", result);
 
     const data = result.data;
     return NextResponse.json(
