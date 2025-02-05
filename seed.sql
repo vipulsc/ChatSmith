@@ -1,4 +1,3 @@
--- Create the chatbots table
 CREATE TABLE chatbots (
     id SERIAL PRIMARY KEY,
     clerk_user_id VARCHAR(255) NOT NULL, -- Clerk's user ID
@@ -6,7 +5,7 @@ CREATE TABLE chatbots (
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL
 );
 
--- Create the chatbot_characteristics table
+
 CREATE TABLE chatbot_characteristics (
     id SERIAL PRIMARY KEY,
     chatbot_id INT REFERENCES chatbots(id) ON DELETE CASCADE,
