@@ -1,3 +1,5 @@
+// create-chatbot
+
 "use client";
 import React, { FormEvent, useState } from "react";
 import Avatar from "@/components/Avatar";
@@ -27,15 +29,11 @@ function CreateChatbot() {
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
     try {
-
-
       const data = await createChatbot();
       setName("");
 
       router.push(`/edit-chatbot/${data.data.insertChatbots.id}`);
-    } catch (error) {
-
-    }
+    } catch (error) {}
   };
   return (
     <div className="flex flex-col items-center justify-center md:flex-row md:space-x-10 bg-white p-10 rounded-md m-10">
